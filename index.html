@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Pedorra 1</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="/">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+        <div>
+            <a href="prueba-pedorra-2.html">Prueba pedorra 2</a>
+        </div>
+    </nav>
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
+        </div>
+    </div>
+    <main class="main-container">
+        <h2>Prueba pedorra 1</h2>
+        <div class="container">
+            <p class="text-light">
+                Dado esta archivo JSON https://www.cityexpress.com/data/autocomplete.json, guardarlo en local y renderizar en una tabla todos los hoteles y cada una de sus propiedades(Código de hotel, Marca, etiqueta de hotel, boton de eliminar y editar )
+            </p>
+        </div>
+        <!-- Tabla Pedorra -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-light">Código de hotel</th>
+                    <th class="text-light">Marca</th>
+                    <th class="text-light">Nombre</th>
+                    <th class="text-light">Acción</th>
+                </tr>
+            </thead>
+            <tbody id="table_hotels">
+            </tbody>
+        </table>
+    </main>
+
+    <div class="modal">
+        <div class="modal-container">
+            <div class="container">
+                <h2>Editar datos</h2>
+                <form>
+                    <div class="input-container">
+                        <p for="">Codigo Hotel</p>
+                        <input type="text" class="input" id="input-codigo">
+                        <input type="hidden" class="input" id="input-codigo-actual">
+                    </div>
+                    <div class="input-container">
+                        <p for="">Marca</p>
+                        <input type="text" class="input" id="input-marca">
+                    </div>
+                    <div class="input-container">
+                        <p for="">Nombre</p>
+                        <input type="text" class="input" id="input-nombre">
+                    </div>
+                    <div class="modal-action">
+                        <button class="button button-primary" onclick="saveModal(event)">Guardar</button>
+                        <button class="button button-secondary" onclick="hideModal(event)">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
